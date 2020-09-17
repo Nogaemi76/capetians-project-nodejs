@@ -1,0 +1,543 @@
+@font-face {
+    font-family: 'Lusitana';
+    font-weight: normal;
+    src: url(/assets/fonts/lusitana-regular-webfont.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'Lusitana';
+    font-weight: bold;
+    src: url(/assets/fonts/lusitana-bold-webfont.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'JSL Ancient';
+    font-style: normal;
+    src: url(/assets/fonts/jancient-webfont.woff2) format("woff2");
+}
+
+html,body {
+    height:100%;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lusitana';
+    font-size:1.6rem;
+    background-color: #bc4639;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+h1,h2 {
+    margin: 0;
+    font-family: 'JSL Ancient';
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* SLIDER */
+
+#slideshow_container {
+    margin-top: 7rem;
+}
+.slideshow {
+    position: relative;
+    margin: 0 9rem;
+}
+.slide {
+    display: none;
+    background-color:#f3e0dc;
+    padding: 3rem 0;
+    border-radius: .6rem;
+} 
+.slide img {
+    height: 45rem;
+    display: block;
+    margin: 0 auto;
+}
+.slide p {
+    color: #5C2018;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+
+#global_container {
+    position: relative;
+}
+
+/* HEADER + NAV - PAGE INDEX*/
+#headnav-container {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+/* HEADER PARTIAL */
+header {
+    background-color: #bc4639;
+    width: 100%;
+    position: relative;
+    height: 10rem;    
+}
+header h1 {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+}
+header a:first-of-type {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; 
+}
+header a img {
+    width: 5rem;
+}
+
+/* NAV PARTIAL */
+
+/* Top-nav */
+#top-nav {
+    background-color: #bc4639;
+}
+#ul_nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JSL Ancient';
+    letter-spacing: .15rem;
+    background-color: #d4a59a;
+    margin: 0 9rem;
+}
+#ul_nav li {
+    width: 100%;
+    text-align: center;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ul_nav li.active {
+    background-color: #4285F4;
+}
+#ul_nav li a {
+    display: inline-block;
+}
+
+/* Menu-burger */
+
+#burger_container {
+    z-index: 999;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+}
+#menu_burger {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    border: .2rem solid #4285F4;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 2rem;
+}
+#menu_burger span, #menu_burger span::before, #menu_burger span::after {
+    width: 2rem;
+    height: .2rem;
+    background-color: #4285F4;
+}
+#menu_burger span::before, #menu_burger span::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+#menu_burger span::before {
+    top: 1rem;
+}
+#menu_burger span::after {
+    bottom: 1rem;
+}
+#menu_burger.close span {
+    visibility: hidden;
+}
+#menu_burger.close span::before {
+    visibility: visible;
+    transform: rotate(45deg);
+    transform-origin: center;
+    top: 2rem;
+    transition: all .2s ease-in-out;
+}
+#menu_burger.close span::after {
+    visibility: visible;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    top: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+/* ASIDE PARTIAL */
+
+aside {
+    background-color: #4285F4;
+    z-index: 9999;
+    position: absolute;
+    right: -100vw;
+    margin-top: 8rem;
+    padding: 3rem;
+    width: 100vw;
+    height: 100vh;
+    height: calc(100% - 8rem);
+    font-size: 2rem;
+    transition: all .5s;
+}
+aside.show{
+    right: 0;
+}
+.aside_li_nav {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* MAIN */
+h2 {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3rem;
+    background-color: #4285F4;
+    color: white;
+}
+
+main {
+    padding-top: 16rem;
+    background-color: #BC4639;
+}
+.container {
+    margin: 0 9rem;
+    background-color: white;
+}
+article {
+    padding: 2rem 3rem;
+}
+main article p {
+    /* text-align: justify; */
+    margin-bottom: 1rem;
+}
+main article p::first-letter {
+    font-size: 4rem;
+    color: #4285F4;
+}
+
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.main_img {
+    padding: 1rem 2rem;
+}
+
+/* PAGE INDEX */
+
+#dynasty article img {
+    width: 30rem;
+}
+
+/* PAGE HUGUES CAPET */
+
+#hugues_capet article img:first-of-type {
+    width: 60rem;
+}
+#hugues_capet article img:last-of-type {
+    width: 30rem;
+}
+
+/* PAGE SAINT-LOUIS */
+
+#saint_louis article img:first-of-type {
+    width: 30rem;
+}
+#saint_louis article img:last-of-type {
+    width: 60rem;
+}
+
+/* PAGE PHILIPPE LE BEL */
+
+#philippe_lebel article img:first-of-type {
+    width: 45rem;
+}
+#philippe_lebel article img:last-of-type {
+    width: 22rem;
+}
+
+/* PAGE PHILIPPE AUGUSTE */
+
+#philippe_auguste img:first-of-type {
+    width: 50rem;
+}
+#philippe_auguste img:last-of-type {
+    width: 30rem;
+}
+
+/* PAGE CONTACT */
+
+#contact {
+    background-color: #D4A59A;
+}
+#contact > p:first-of-type {
+    padding-top: 2rem;
+    text-align: center;
+    color: #5C2018;
+}
+#contact #errorList {
+    background: red;
+    margin: 2rem 10rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 1rem 0;
+}
+#contact #errorList li {
+    margin: .5rem 0;
+}
+#contact #errorList li:first-of-type {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin:0 15rem;
+    color: #5C2018;
+}
+form label {
+    margin-top: 1rem;
+    font-weight: bold;
+    display: block;
+}
+form input {
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+}
+input[type="submit"] {
+    width: 40rem;
+    background-color: #88CF04;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    margin: 2rem auto;   
+}
+
+/* FOOTER PARTIAL */
+
+footer {
+    background-color: #bc4639;
+    color: white;
+    padding: 2rem 9rem;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+#clock {
+    background-color: #5C2018;
+    padding: .5rem;
+    width: 15rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.clockEvenColor {
+    color: #d4a59a;
+}
+.clockOddColor {
+    color: #f3e0dc;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width:768px) {
+
+    /* HEADER + NAV - PAGE INDEX */
+
+    #headnav-container {
+        display: flex;
+    }
+
+    /* NAV PARTIAL */
+
+    #ul_nav {
+        display: none;
+    }
+   
+    #burger_container {
+        display: block;
+        top: 2rem;
+    }
+
+    /* HEADER PARTIAL */
+
+    header {
+        height: 8rem;
+    }
+    header h1 {
+        padding: 2.5rem 0;
+        font-size: 3.5rem;
+    }
+    header a img {
+        width: 4rem;
+    }
+
+    /* MAIN */
+
+    .container{
+        margin: 0 6rem;
+    }
+    main {
+        padding-top: 8rem;
+    }
+
+    /* SLIDER */
+
+    .slideshow {
+        margin: 0 6rem;
+    }
+    .slide img {
+        height: 33rem;
+    }
+
+    /* PAGE CONTACT */
+
+    form {
+        margin:0 10rem;
+    }
+
+    /* FOOTER PARTIAL */
+
+    footer {
+        padding: 1rem 6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+     /* HEADER + NAV - PAGE INDEX */
+
+     #headnav-container {
+        display: flex;
+    }
+
+    /* NAV PARTIAL */
+
+    #ul_nav {
+        display: none;
+    }
+    
+    #burger_container {
+        display: block;
+        top: 1rem;
+        right: .5rem;
+    }
+    #menu_burger {
+        margin-right: .5rem;
+    }
+
+    /* HEADER PARTIAL */
+
+    header {
+        height: 6rem;
+    }
+    header h1 {
+        padding: 2.2rem 0 2.2rem 1rem;
+        font-size: 2.5rem;
+        text-align: start;
+    }
+    header a img {
+        display: none;
+    }
+
+    /* ASIDE PARTIAL */
+
+    aside {
+        margin-top: 6rem;
+        width: 100vw;
+        right: -100vw;
+        height: calc(100% - 6rem);
+    }
+
+    /* MAIN */
+
+    .container {
+        margin: 0;
+    }
+    main {
+        padding-top: 6rem;
+    }
+    h2 {
+        padding: 1rem 0;
+    }
+
+     /* SLIDER */
+    #slideshow_container {
+        margin-top: 0;
+    }
+    .slideshow {
+        margin: 0;
+    }
+    .slide {
+        overflow: hidden;
+        padding: 1.5rem 0 2rem 0;
+        border-radius: 0;
+    }
+    .slide img {
+        height: 20rem;
+    }
+
+    /* ALL PAGES */
+
+    #hugues_capet article img:first-of-type, 
+    #saint_louis article img:last-of-type,
+    #philippe_lebel article img:first-of-type,
+    #philippe_lebel article img:last-of-type,
+    #philippe_auguste img:first-of-type {
+        width: 30rem;
+    }
+
+    /* PAGE CONTACT */
+
+    form {
+        margin:0 3rem;
+    }
+    input[type="submit"] {
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    /* FOOTER PARTIAL */
+
+    footer {
+        padding: 1rem 2rem;
+    }
+}

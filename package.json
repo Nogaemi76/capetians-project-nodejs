@@ -1,0 +1,27 @@
+{
+  "name": "node-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Nogaemi76/capetian_kings.git"
+  },
+  "author": "Nogaemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Nogaemi76/capetian_kings/issues"
+  },
+  "homepage": "https://gitlab.com/Nogaemi76/capetian_kings#readme"
+}
